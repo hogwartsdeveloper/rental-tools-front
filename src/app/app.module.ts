@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ToolbarComponent} from "./modules/toolbar/toolbar.component";
+import {PriceComponent} from "./modules/price/price.component";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {ToolbarComponent} from "./modules/toolbar/toolbar.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ToolbarComponent
+    ToolbarComponent,
+    PriceComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
