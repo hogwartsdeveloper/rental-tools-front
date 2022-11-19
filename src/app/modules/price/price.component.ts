@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {MatDialog} from "@angular/material/dialog";
+import {PriceDetailComponent} from "./price-detail/price-detail.component";
 
 @Component({
   selector: 'app-price',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './price.component.html',
   styleUrls: ['./price.component.scss']
 })
 export class PriceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDetail() {
+    this.dialog.open(PriceDetailComponent, { panelClass: ['md:w-3/5', 'w-full'],
+      maxHeight: '85vh', autoFocus: false});
   }
 
 }
