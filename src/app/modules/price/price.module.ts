@@ -6,10 +6,18 @@ import { PriceRoutingModule } from './price-routing.module';
 import { PriceService } from './services/price.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PipeModule } from '../pipe/pipe/pipe.module';
 
 @NgModule({
   declarations: [PriceComponent, PriceDetailComponent, PriceCardComponent],
-  imports: [PriceRoutingModule, HttpClientModule, CommonModule],
+  imports: [
+    PriceRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule,
+    PipeModule,
+  ],
   exports: [PriceComponent],
   providers: [PriceService],
 })
