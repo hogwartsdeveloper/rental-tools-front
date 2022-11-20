@@ -14,9 +14,6 @@ export class PriceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDetail() {
-    this.dialog.open(PriceDetailComponent, { panelClass: ['md:w-3/5', 'w-full'],
-      maxHeight: '85vh', autoFocus: false});
-  }
+
 
 }
